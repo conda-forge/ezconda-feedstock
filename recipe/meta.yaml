@@ -1,5 +1,5 @@
 {% set name = "ezconda" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ezconda-{{ version }}.tar.gz
-  sha256: 0a2c1d1e6356b423b1db3c6ee6225901a516df4dde78ea318810e71e26bebf90
+  sha256: 5560c04e3be0d602da28426551e4ba965f95fa73af1e9d1605ef5859eedd986e
 
 build:
   number: 0
