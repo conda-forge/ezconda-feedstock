@@ -27,7 +27,7 @@ requirements:
     - pyyaml >=5.4.1,<6.0.0
     - rich >=10.11.0,<11.0.0
     - typer >=0.4.0
-    - tomlkit >=0.9.0
+    - tomlkit >=0.9.0,<0.10.0
     - conda >=4.8
     - mamba
 
