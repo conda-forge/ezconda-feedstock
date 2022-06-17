@@ -1,5 +1,5 @@
 {% set name = "ezconda" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ezconda-{{ version }}.tar.gz
-  sha256: 2c209e22e130cf24026384c0b275bb534f39d08541e3d89bde901a513c2fafc4
+  sha256: 90d66fb3b0a770ed889ded9fb21c4a301bfde74e0afdb7cec8b5287841cba295
 
 build:
   number: 0
@@ -21,13 +21,14 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.6
+    - python >=3.7
   run:
-    - python >=3.6
+    - python >=3.7
     - pyyaml >=5.4.1
     - rich >=10.11.0
     - typer >=0.4.0
     - tomlkit >=0.9.0
+    - importlib_metadata >=4.11.4
     - conda >=4.8
     - mamba
 
