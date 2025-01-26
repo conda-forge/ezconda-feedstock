@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ezconda-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ezconda-{{ version }}.tar.gz
   sha256: 6fdba639fdafa2559e321eb5abb96b9c6fc803e492d5b961fb6d042befd5cad7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ezconda = ezconda.main:app
@@ -21,9 +21,9 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - pyyaml >=5.4.1
     - rich >=10.11.0
     - typer >=0.4.0
@@ -41,6 +41,7 @@ test:
     - ezconda --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/SarthakJariwala/ezconda
